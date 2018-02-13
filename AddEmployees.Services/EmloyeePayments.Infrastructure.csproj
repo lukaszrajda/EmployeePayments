@@ -97,9 +97,11 @@
     <Compile Include="Services\EmployeeService\AddSalariedEmployee.cs" />
     <Compile Include="Services\EmployeeService\ChangeAddressTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeClassificationTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeCommissionedTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeEmployeeTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeHourlyTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeNameTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeSalariedTransaction.cs" />
     <Compile Include="Services\EmployeeService\DeleteEmployeeTransaction.cs" />
     <Compile Include="Database\PayrollDatabase.cs" />
     <Compile Include="Services\ITransaction.cs" />
