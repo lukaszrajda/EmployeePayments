@@ -1,4 +1,5 @@
-﻿using EmloyeePayments.Infrastructure.Database;
+﻿using AddEmployees.Services.Payment.Method;
+using EmloyeePayments.Infrastructure.Database;
 using EmloyeePayments.Infrastructure.Payment.Classification;
 using EmloyeePayments.Infrastructure.Payment.Schedule;
 using EmloyeePayments.Infrastructure.Services.EmployeeService;
@@ -65,6 +66,28 @@ namespace EmloyeePayments.Test.EmployeeServiceTest
             var e = PayrollDatabase.GetEmployee(base.EmpId);
             Assert.IsTrue(e.Classification is SalariedClassification);
             Assert.IsTrue(e.Schedule is MonthlySchedule);
+        }
+
+        [TestMethod]
+        public void ChangeMailMethodTest()
+        {
+            AddHourlyEmployee he = new AddHourlyEmployee(base.EmpId, base.Name, base.Address, base.HourlyRate);
+            he.Execute();
+            ChangeMailTransaction cmt = new ChangeMailTransaction(base.EmpId);
+            cmt.Execute();
+            var e = PayrollDatabase.GetEmployee(base.EmpId);
+            Assert.IsTrue(e.Method is MailMethod);
+        }
+
+        [TestMethod]
+        public void ChangeDirectMethodTest()
+        {
+            AddHourlyEmployee he = new AddHourlyEmployee(base.EmpId, base.Name, base.Address, base.HourlyRate);
+            he.Execute();
+            ChangeDirectTransaction cdt = new ChangeDirectTransaction(base.EmpId);
+            cdt.Execute();
+            var e = PayrollDatabase.GetEmployee(base.EmpId);
+            Assert.IsTrue(e.Method is DirectMethod);
         }
     }
 }

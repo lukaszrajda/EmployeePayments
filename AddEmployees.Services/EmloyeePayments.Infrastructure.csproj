@@ -98,8 +98,12 @@
     <Compile Include="Services\EmployeeService\ChangeAddressTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeClassificationTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeCommissionedTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeDirectTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeEmployeeTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeHoldTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeHourlyTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeMailTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeMethodTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeNameTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeSalariedTransaction.cs" />
     <Compile Include="Services\EmployeeService\DeleteEmployeeTransaction.cs" />
