@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmloyeePayments.Api", "EmloyeePayments\EmloyeePayments.Api.csproj", "{C05BEF38-B26D-43C3-B619-A51C284697C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmloyeePayments.Test", "EmloyeePayments.Test\EmloyeePayments.Test.csproj", "{037F2414-56A0-4433-8F07-844CB296DA8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmloyeePayments.Infrastructure", "AddEmployees.Services\EmloyeePayments.Infrastructure.csproj", "{95F8AC37-8F3B-45D6-A252-20EF131F226C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C05BEF38-B26D-43C3-B619-A51C284697C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05BEF38-B26D-43C3-B619-A51C284697C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05BEF38-B26D-43C3-B619-A51C284697C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05BEF38-B26D-43C3-B619-A51C284697C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{037F2414-56A0-4433-8F07-844CB296DA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037F2414-56A0-4433-8F07-844CB296DA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037F2414-56A0-4433-8F07-844CB296DA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037F2414-56A0-4433-8F07-844CB296DA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F8AC37-8F3B-45D6-A252-20EF131F226C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F8AC37-8F3B-45D6-A252-20EF131F226C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F8AC37-8F3B-45D6-A252-20EF131F226C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F8AC37-8F3B-45D6-A252-20EF131F226C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C22B017-8ECC-4FAA-AE02-F783E204D252}
+	EndGlobalSection
+EndGlobal
