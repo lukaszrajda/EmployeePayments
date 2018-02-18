@@ -1,4 +1,6 @@
 ﻿
+using EmloyeePayments.Infrastructure.Domains;
+
 namespace EmloyeePayments.Infrastructure.Payment.Classification
 {
     public class SalariedClassification : IPaymentClassification
@@ -7,6 +9,11 @@ namespace EmloyeePayments.Infrastructure.Payment.Classification
         public SalariedClassification(double salary)
         {
             Salary = salary;
+        }
+
+        public double CalculatePay(PayCheck pc)
+        {
+            return Salary;
         }
     }
 }

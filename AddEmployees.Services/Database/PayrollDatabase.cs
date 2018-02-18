@@ -1,6 +1,6 @@
 ﻿using EmloyeePayments.Infrastructure.Domains;
 using System.Collections;
-
+using System;
 
 namespace EmloyeePayments.Infrastructure.Database
 {
@@ -15,7 +15,12 @@ namespace EmloyeePayments.Infrastructure.Database
 
         public static void DeleteEmlpoyee(int empId)
         {
-            _emloyees[empId] = null;
+            _emloyees.Remove(empId);
+        }
+
+        public static ArrayList GetAllEmployeeIds()
+        {
+            return new ArrayList(_emloyees.Keys);
         }
 
         public static Employee GetEmployee(int empId)
@@ -30,7 +35,7 @@ namespace EmloyeePayments.Infrastructure.Database
 
         public static void RemoveUnionMember(int memberId)
         {
-            _unionMembers[memberId] = null;
+            _unionMembers.Remove(memberId);
         }
 
         public static Employee GetUnionMember(int memberId)

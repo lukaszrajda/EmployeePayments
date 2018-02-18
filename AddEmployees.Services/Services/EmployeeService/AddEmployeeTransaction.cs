@@ -3,6 +3,7 @@ using EmloyeePayments.Infrastructure.Payment.Classification;
 using AddEmployees.Services.Payment.Method;
 using EmloyeePayments.Infrastructure.Domains;
 using EmloyeePayments.Infrastructure.Database;
+using EmloyeePayments.Infrastructure.Affiliation;
 
 namespace EmloyeePayments.Infrastructure.Services.EmployeeService
 {
@@ -23,11 +24,13 @@ namespace EmloyeePayments.Infrastructure.Services.EmployeeService
             IPaymentClassification pc = MakeClassification();
             IPaymentSchedule ps = MakeSchedule();
             IPaymentMethod pm = new HoldMethod();
+            IAffiliation af = new NoAffiliation();
 
             Employee e = new Employee(_empId, _name, _address);
             e.Classification = pc;
             e.Schedule = ps;
             e.Method = pm;
+            e.Affiliation = af;
             PayrollDatabase.AddEmlpoyee(e.EmpId, e);
 
         }

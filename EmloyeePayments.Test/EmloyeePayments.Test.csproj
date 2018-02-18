@@ -58,6 +58,7 @@
     <Compile Include="EmployeeServiceTest\ChangeEmployeeTestBase.cs" />
     <Compile Include="EmployeeServiceTest\UnionMember.cs" />
     <Compile Include="PaymentClassificationTest\ClassificationTest.cs" />
+    <Compile Include="PaymentTests\EmployeePaymentTEsts.cs" />
     <Compile Include="PayrollTest\PayrollTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

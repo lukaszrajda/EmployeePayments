@@ -81,7 +81,9 @@
     <Compile Include="Affiliation\IAffiliation.cs" />
     <Compile Include="Affiliation\NoAffiliation.cs" />
     <Compile Include="Affiliation\UnionAffiliation.cs" />
+    <Compile Include="Domains\Commission.cs" />
     <Compile Include="Domains\Employee.cs" />
+    <Compile Include="Domains\PayCheck.cs" />
     <Compile Include="Domains\ServiceCharge.cs" />
     <Compile Include="Domains\TimeCard.cs" />
     <Compile Include="Payment\Classification\CommissionedClassification.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Payment\Method\HoldMethod.cs" />
     <Compile Include="Payment\Method\IPaymentMethod.cs" />
     <Compile Include="Payment\Method\MailMethod.cs" />
+    <Compile Include="Services\CommissionService\CommissionTransaction.cs" />
     <Compile Include="Services\EmployeeService\AddCommissionedEmployee.cs" />
     <Compile Include="Services\EmployeeService\AddEmployeeTransaction.cs" />
     <Compile Include="Services\EmployeeService\AddHourlyEmployee.cs" />
@@ -112,6 +115,7 @@
     <Compile Include="Services\EmployeeService\ChangeUnaffiliatedTransaction.cs" />
     <Compile Include="Services\EmployeeService\DeleteEmployeeTransaction.cs" />
     <Compile Include="Database\PayrollDatabase.cs" />
+    <Compile Include="Services\EmployeeService\PaymentService\PaydayTransaction.cs" />
     <Compile Include="Services\ITransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Payment\Schedule\BiweeklySchedule.cs" />
@@ -121,9 +125,7 @@
     <Compile Include="Services\TimeCardService\TimeCardTransaction.cs" />
     <Compile Include="Services\UnionMembersService\ServiceChargeTransaction.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\EmployeeService\PaymentService\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

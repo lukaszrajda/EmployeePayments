@@ -1,4 +1,5 @@
-﻿using EmloyeePayments.Infrastructure.Domains;
+﻿using EmloyeePayments.Infrastructure.Database;
+using EmloyeePayments.Infrastructure.Domains;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,6 +27,11 @@ namespace EmloyeePayments.Infrastructure.Affiliation
         public ServiceCharge GetServiceCharge(DateTime date)
         {
             return _serviceChargeList[date] as ServiceCharge;
+        }
+
+        public double CalculateDeductions(PayCheck pc)
+        {
+            throw new NotImplementedException();
         }
     }
 }
