@@ -9,7 +9,16 @@ namespace EmloyeePayments.Infrastructure.Affiliation
 {
     public class UnionAffiliation : IAffiliation
     {
-        private readonly Hashtable _serviceChargeList = new Hashtable(); 
+        private readonly Hashtable _serviceChargeList = new Hashtable();
+        public int MemberId { get; private set; }
+        public double Dues { get; private set; }
+
+        public UnionAffiliation(int memberId, double dues)
+        {
+            MemberId = memberId;
+            Dues = dues;
+        }
+
         public void AddServiceCharge(ServiceCharge serviceCharge)
         {
             _serviceChargeList.Add(serviceCharge.Date, serviceCharge);

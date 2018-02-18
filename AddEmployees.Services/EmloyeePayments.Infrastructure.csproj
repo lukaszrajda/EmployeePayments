@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Affiliation\IAffiliation.cs" />
+    <Compile Include="Affiliation\NoAffiliation.cs" />
     <Compile Include="Affiliation\UnionAffiliation.cs" />
     <Compile Include="Domains\Employee.cs" />
     <Compile Include="Domains\ServiceCharge.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Services\EmployeeService\AddHourlyEmployee.cs" />
     <Compile Include="Services\EmployeeService\AddSalariedEmployee.cs" />
     <Compile Include="Services\EmployeeService\ChangeAddressTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeAffiliationTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeClassificationTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeCommissionedTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeDirectTransaction.cs" />
@@ -103,9 +105,11 @@
     <Compile Include="Services\EmployeeService\ChangeHoldTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeHourlyTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeMailTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeMemberTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeMethodTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeNameTransaction.cs" />
     <Compile Include="Services\EmployeeService\ChangeSalariedTransaction.cs" />
+    <Compile Include="Services\EmployeeService\ChangeUnaffiliatedTransaction.cs" />
     <Compile Include="Services\EmployeeService\DeleteEmployeeTransaction.cs" />
     <Compile Include="Database\PayrollDatabase.cs" />
     <Compile Include="Services\ITransaction.cs" />
@@ -116,6 +120,9 @@
     <Compile Include="Payment\Schedule\WeeklySchedule.cs" />
     <Compile Include="Services\TimeCardService\TimeCardTransaction.cs" />
     <Compile Include="Services\UnionMembersService\ServiceChargeTransaction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\EmployeeService\PaymentService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

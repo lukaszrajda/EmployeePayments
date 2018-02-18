@@ -28,6 +28,11 @@ namespace EmloyeePayments.Infrastructure.Database
             _unionMembers.Add(memberId, employee);
         }
 
+        public static void RemoveUnionMember(int memberId)
+        {
+            _unionMembers[memberId] = null;
+        }
+
         public static Employee GetUnionMember(int memberId)
         {
             return _unionMembers[memberId] as Employee;

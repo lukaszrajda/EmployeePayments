@@ -22,9 +22,10 @@ namespace EmloyeePayments.Test.AffiliationTest
             Employee e = PayrollDatabase.GetEmployee(empId);
             Assert.IsNotNull(e);
 
-            UnionAffiliation af = new UnionAffiliation();
-            e.Affiliation = af;
             var memberId = 86;
+            var dues = 88.12;
+            UnionAffiliation af = new UnionAffiliation(memberId, dues);
+            e.Affiliation = af;
             var date = new DateTime(2005, 8, 8);
             var charge = 12.95;
             PayrollDatabase.AddUnionMember(memberId, e);
