@@ -5,6 +5,11 @@ namespace EmloyeePayments.Infrastructure.Payment.Schedule
 {
     public class BiweeklySchedule : IPaymentSchedule
     {
+        public DateTime GetPayScheduleStartDate(DateTime endDate)
+        {
+            return endDate.AddDays(-12);
+        }
+
         public bool IsPayDate(DateTime payDate)
         {
             return IsSecodnOrFourthFridayOfMonth(payDate);

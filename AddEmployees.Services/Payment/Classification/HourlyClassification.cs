@@ -1,4 +1,5 @@
 ﻿using EmloyeePayments.Infrastructure.Domains;
+using EmloyeePayments.Infrastructure.Extensions;
 using System;
 using System.Collections;
 
@@ -22,7 +23,7 @@ namespace EmloyeePayments.Infrastructure.Payment.Classification
             double totalPay = 0.0;
             foreach (TimeCard tc in _timeCardsTable.Values)
             {
-                if (IsInPayPeriod(tc, pc.PayDate))
+                if (DateUtils.IsInPayPeriod(tc.Date, pc.StartDate, pc.PayDate))
                 {
                     totalPay += CalculatePayForTimeCard(tc);
                 }
@@ -37,12 +38,6 @@ namespace EmloyeePayments.Infrastructure.Payment.Classification
             return HourlyRate * normalHours + HourlyRate * overTimeHours * 1.5;
         }
 
-        private bool IsInPayPeriod(TimeCard tc, DateTime payDate)
-        {
-            var payPeriodEndDate = payDate;
-            var payPeriodStartDate = payDate.AddDays(-5);
-            return tc.Date <= payPeriodEndDate && tc.Date >= payPeriodStartDate;
-        }
 
         public TimeCard GetTimeCard(DateTime date)
         {

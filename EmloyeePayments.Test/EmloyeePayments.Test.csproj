@@ -53,6 +53,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AffiliationTest\AffiliationServiceTests.cs" />
     <Compile Include="AffiliationTest\ServiceChargeTests.cs" />
     <Compile Include="EmployeeServiceTest\ChangeEmlopyeeTest.cs" />
     <Compile Include="EmployeeServiceTest\ChangeEmployeeTestBase.cs" />

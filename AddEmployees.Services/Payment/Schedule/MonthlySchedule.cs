@@ -4,6 +4,11 @@ namespace EmloyeePayments.Infrastructure.Payment.Schedule
 {
     public class MonthlySchedule : IPaymentSchedule
     {
+        public DateTime GetPayScheduleStartDate(DateTime endDate)
+        {
+            return new DateTime(endDate.Year, endDate.Month, 1);
+        }
+
         public bool IsPayDate(DateTime payDate)
         {
             return IsLastDayOfMonth(payDate);

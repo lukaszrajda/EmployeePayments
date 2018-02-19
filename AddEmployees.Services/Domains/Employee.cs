@@ -23,6 +23,11 @@ namespace EmloyeePayments.Infrastructure.Domains
             Address = address;
         }
 
+        public DateTime GetPayPeriodStartDate(DateTime endDate)
+        {
+            return Schedule.GetPayScheduleStartDate(endDate);
+        }
+
         public bool IsPayDate(DateTime payDate)
         {
             return Schedule.IsPayDate(payDate);

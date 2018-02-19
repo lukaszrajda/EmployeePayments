@@ -15,5 +15,6 @@ namespace EmloyeePayments.Infrastructure.Payment.Classification
         {
             return Salary;
         }
+
     }
 }

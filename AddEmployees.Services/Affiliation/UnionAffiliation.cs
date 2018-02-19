@@ -31,7 +31,20 @@ namespace EmloyeePayments.Infrastructure.Affiliation
 
         public double CalculateDeductions(PayCheck pc)
         {
-            throw new NotImplementedException();
+            double totalDues = 0;
+            int fridaysCount = NumOfFridaysInPayPeriod(pc.StartDate, pc.PayDate);
+            return fridaysCount * Dues;
+        }
+
+        private int NumOfFridaysInPayPeriod(DateTime payPeriodStart, DateTime payPeriodEnd)
+        {
+            int fridays = 0;
+            for (DateTime day = payPeriodStart; day <= payPeriodEnd; day = day.AddDays(1))
+            {
+                if (day.DayOfWeek == DayOfWeek.Friday)
+                    fridays++;
+            }
+            return fridays;
         }
     }
 }

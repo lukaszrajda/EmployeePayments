@@ -86,6 +86,7 @@
     <Compile Include="Domains\PayCheck.cs" />
     <Compile Include="Domains\ServiceCharge.cs" />
     <Compile Include="Domains\TimeCard.cs" />
+    <Compile Include="Extensions\DateUtils.cs" />
     <Compile Include="Payment\Classification\CommissionedClassification.cs" />
     <Compile Include="Payment\Classification\HourlyClassification.cs" />
     <Compile Include="Payment\Classification\IPaymentClassification.cs" />

@@ -23,7 +23,8 @@ namespace EmloyeePayments.Infrastructure.Services.EmployeeService.PaymentService
                 var e = PayrollDatabase.GetEmployee(empId);
                 if (e.IsPayDate(_payDate))
                 {
-                    PayCheck pc = new PayCheck(_payDate);
+                    DateTime startDate = e.GetPayPeriodStartDate(_payDate);
+                    PayCheck pc = new PayCheck(startDate, _payDate);
                     e.Payday(pc);
                     _paychecks[e.EmpId] = pc;
                 }

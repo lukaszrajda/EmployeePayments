@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using EmloyeePayments.Infrastructure.Domains;
 using System.Collections;
+using EmloyeePayments.Infrastructure.Extensions;
 
 namespace EmloyeePayments.Infrastructure.Payment.Classification
 {
@@ -27,7 +28,7 @@ namespace EmloyeePayments.Infrastructure.Payment.Classification
             double totalPay = Salary;
             foreach (SalesReport sr in _salesReports.Values)
             {
-                if (IsInPayPeriod(sr, pc.PayDate))
+                if (DateUtils.IsInPayPeriod(sr.Date, pc.StartDate, pc.PayDate))
                 {
                     totalPay += CalculatePayForSalesReports(sr);
                 }
@@ -38,13 +39,6 @@ namespace EmloyeePayments.Infrastructure.Payment.Classification
         private double CalculatePayForSalesReports(SalesReport sr)
         {
             return CommissionRate * sr.SalesAmount;
-        }
-
-        private bool IsInPayPeriod(SalesReport sr, DateTime payDate)
-        {
-            var payPeriodEndDate = payDate;
-            var payPeriodStartDate = payDate.AddDays(-12);
-            return sr.Date <= payPeriodEndDate && sr.Date >= payPeriodStartDate;
         }
 
         public SalesReport GetSaleReport(DateTime date)
